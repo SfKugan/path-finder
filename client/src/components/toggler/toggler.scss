@@ -1,0 +1,35 @@
+@import '../../app.scss';
+
+.toggler-foundation {
+    display: inline-block;
+    position: relative;
+    width: 55px;
+    height: 12px;
+    border-radius: 50% / 30px;
+    background-color: $page-background-color-dark;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    &.dark {
+        .toggler-top.active {
+            background-color: $menu-header-color-dark;
+        }
+    }
+
+    .toggler-top {
+        position: absolute;
+        right: auto;
+        left: 5px;
+        top: -50%;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $menu-item-color-dark;
+        transition: all 0.3s;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+        &.active {
+            left: 25px;
+            background-color: $menu-header-color;
+        }
+    }
+}

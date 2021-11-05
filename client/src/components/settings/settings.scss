@@ -1,0 +1,24 @@
+@import '../../app.scss';
+
+.settings-container{
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 40px;
+    height: 100%;
+    background-color: $page-background-color;
+    color: $page-background-color-dark;
+    font-size: 15px;
+
+    &.dark {
+        color: $page-background-color;
+        background-color: $page-background-color-dark;
+    }
+
+    .settings-item{
+        margin-bottom: 40px;
+
+        span {
+            margin-left: 30px;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import '../../app.scss';
+
+.notifications-container {
+    z-index: 15;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+
+    .notification-container {
+        border-radius: 3px;
+        padding: 9px 8px 13px 8px;
+        width: 190px;
+        margin-top: 5px;
+
+        &.error {
+            background-color: $error-notofocation;
+            color: white;
+        }
+
+        hr {
+            background-color: #dcdcdc;
+            border: none;
+            height: 0.5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.close-notification {
+    animation-duration: 1s; 
+    animation-fill-mode: both;  
+    animation-name: hide;
+}
+
+@keyframes hide {
+    0% {                
+        opacity: 1;
+    }
+    100% {              
+        opacity: 0;
+    }
+}
+
+.open-notification {
+    animation-duration: 0.5s; 
+    animation-fill-mode: both;  
+    animation-name: fade; 
+}
+ 
+@keyframes fade {
+    0% {                
+        opacity: 0;
+    }
+    100% {              
+        opacity: 1;
+    }
+}
